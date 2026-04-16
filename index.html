@@ -5,44 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daniel | CS 499 ePortfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; color: #333; }
-    h1 { color: #1a3a5c; }
-    h2 { color: #2c5f8a; border-bottom: 2px solid #2c5f8a; padding-bottom: 6px; }
-    nav a { margin-right: 20px; color: #2c5f8a; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { margin-top: 40px; }
-    footer { margin-top: 60px; font-size: 0.85em; color: #888; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 32px;
+      color: #24292f;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 2em;
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 0.3em;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 0.3em;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+    h3 {
+      font-size: 1.25em;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+    p { margin-top: 0; margin-bottom: 16px; }
+    ul { padding-left: 2em; margin-top: 0; margin-bottom: 16px; }
+    li { margin-bottom: 4px; }
+    a { color: #0969da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr {
+      border: 0;
+      border-top: 1px solid #d8dee4;
+      margin: 24px 0;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background-color: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 6px;
+      font-size: 85%;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid #d8dee4;
+      font-size: 0.9em;
+      color: #57606a;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Daniel</h1>
-  <p>CS 499 Capstone ePortfolio | Southern New Hampshire University</p>
+<h1>Daniel | CS 499 ePortfolio</h1>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#review">Code Review</a>
-    <a href="#artifacts">Artifacts</a>
-  </nav>
+<p>Southern New Hampshire University &mdash; B.S. Computer Science Capstone</p>
 
-  <section id="about">
-    <h2>Professional Self-Assessment</h2>
-    <p>Coming soon.</p>
-  </section>
+<hr>
 
-  <section id="review">
-    <h2>Code Review</h2>
-    <p>Coming soon.</p>
-  </section>
+<h2>Professional Self-Assessment</h2>
 
-  <section id="artifacts">
-    <h2>Artifacts</h2>
-    <p>Coming soon.</p>
-  </section>
+<p>Completing the Bachelor of Science in Computer Science at Southern New Hampshire University has been a process of moving from writing code that simply works to designing software that is maintainable, secure, and aligned with professional standards. This ePortfolio represents the culmination of that journey. It centers on a single artifact &mdash; a Weight Tracker Android application originally developed in CS 360: Mobile Architecture and Programming &mdash; which I have enhanced across all three capstone categories: software design and engineering, algorithms and data structures, and databases.</p>
 
-  <footer>
-    <p>Daniel &mdash; SNHU CS 499 &mdash; 2025</p>
-  </footer>
+<p>The full written self-assessment covers collaboration in a team environment, stakeholder communication, algorithmic reasoning, software engineering and database design, and the security mindset that runs through all of the work.</p>
+
+<p><a href="docs/Professional_Self_Assessment.docx">Read the full Professional Self-Assessment (.docx)</a></p>
+
+<hr>
+
+<h2>Enhanced Artifacts</h2>
+
+<p>All three enhancements build on a single artifact &mdash; the CS 360 Weight Tracker Android app. Each enhancement builds on the previous one rather than on the original, so the original source is preserved unchanged as a baseline in every repository.</p>
+
+<h3>Enhancement One &mdash; Software Design and Engineering</h3>
+
+<p>Refactored the app for maintainability and security:</p>
+<ul>
+  <li>Created <code>InputValidator.java</code> to centralize all field validation</li>
+  <li>Created <code>PasswordUtils.java</code> implementing salted SHA-256 password hashing</li>
+  <li>Added try-finally cursor management throughout</li>
+  <li>Replaced anonymous logic with named, testable methods</li>
+</ul>
+<p>Course outcomes addressed: 2, 4, 5</p>
+<ul>
+  <li><a href="code/enhancement-one/" target="_blank" rel="noopener">View enhanced code</a></li>
+  <li><a href="code/original/" target="_blank" rel="noopener">View original code</a></li>
+  <li><a href="docs/Enhancement_One_Narrative.docx">Read narrative (.docx)</a></li>
+</ul>
+
+<h3>Enhancement Two &mdash; Algorithms and Data Structures</h3>
+
+<p>Added analytics capabilities to the app:</p>
+<ul>
+  <li>Created <code>WeightAnalytics.java</code> with merge sort, binary search, sliding window moving average, and linear regression</li>
+  <li>Added 7-day and 30-day weight projections</li>
+  <li>Added a statistics UI panel in <code>MainActivity.java</code></li>
+  <li>Cached sorted results to avoid re-sorting on every refresh</li>
+</ul>
+<p>Course outcomes addressed: 2, 3, 4</p>
+<ul>
+  <li><a href="code/enhancement-two/" target="_blank" rel="noopener">View enhanced code</a></li>
+  <li><a href="docs/Enhancement_Two_Narrative.docx">Read narrative (.docx)</a></li>
+</ul>
+
+<h3>Enhancement Three &mdash; Databases</h3>
+
+<p>Hardened the data layer:</p>
+<ul>
+  <li>Added <code>DatabaseManager.java</code> implementing the Repository pattern</li>
+  <li>Wrapped all CRUD operations in transactions with audit logging and input sanitization</li>
+  <li>Added CSV export and date-range filtering</li>
+  <li>Upgraded schema to version 3 with composite indexes, enforced foreign keys, ON DELETE CASCADE, and a non-destructive migration path</li>
+</ul>
+<p>Course outcomes addressed: 2, 4, 5</p>
+<ul>
+  <li><a href="code/enhancement-three/" target="_blank" rel="noopener">View enhanced code</a></li>
+  <li><a href="docs/Enhancement_Three_Narrative.docx">Read narrative (.docx)</a></li>
+</ul>
+
+<hr>
+
+<h2>Course Outcomes</h2>
+
+<ul>
+  <li><strong>Outcome 1</strong> &mdash; Collaborative environments: addressed through documented, sprint-style enhancement planning and checkpoint reporting</li>
+  <li><strong>Outcome 2</strong> &mdash; Professional communication: code review video, APA-formatted narratives, and written self-assessment</li>
+  <li><strong>Outcome 3</strong> &mdash; Algorithmic solutions: merge sort, binary search, moving average, linear regression with complexity analysis</li>
+  <li><strong>Outcome 4</strong> &mdash; Innovative techniques and tools: Repository pattern, audit logging, schema migrations, caching</li>
+  <li><strong>Outcome 5</strong> &mdash; Security mindset: salted password hashing, centralized validation, parameterized queries, audit trails</li>
+</ul>
+
+<footer>
+  Daniel &mdash; SNHU CS 499 &mdash; 2026 &mdash; <a href="https://github.com/Dcochrane1997" target="_blank" rel="noopener">github.com/Dcochrane1997</a>
+</footer>
 
 </body>
 </html>
